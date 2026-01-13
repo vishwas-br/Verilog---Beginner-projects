@@ -10,6 +10,7 @@ module mux_2_1_tb;
  #2;
  sel = 1;
  #2;
+ i0 = 1; i1 = 0;
  sel = 1;
  #2;
  sel = 0;
