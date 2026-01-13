@@ -1,9 +1,8 @@
-module bin2gray #(parameter WIDTH=4) (input [WIDTH-1:0] binary, output
-[WIDTH-1:0] gray);
+module bin2gray #(parameter WIDTH=4) (input [WIDTH-1:0] binary, output [WIDTH-1:0] gray);
   
  genvar i; 
  generate
-  for(i=0;i<WIDTH-1;i++) begin
+   for(i = 0; i < WIDTH - 1; i = i + 1) begin
   assign gray[i] = binary[i] ^ binary[i+1];
   end
  endgenerate
