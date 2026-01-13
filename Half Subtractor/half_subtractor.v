@@ -1,4 +1,4 @@
-module half_subtractor(a, b, sum, carry);
+module half_subtractor(a, b, diff, borrow);
 
 input  a, b;  //input declaration
 output diff, borrow;  //output declaration
