@@ -1,9 +1,9 @@
 module demux_1_8_tb;
-  reg [2:0] sel;
+ reg [2:0] sel;
  reg in;
  wire y0, y1, y2, y3, y4, y5, y6, y7;
  
- demux_1_4 demux(sel, in, y0, y1, y2, y3, y4, y5, y6, y7);
+ demux_1_8 demux(sel, in, y0, y1, y2, y3, y4, y5, y6, y7);
  
  initial begin
    $monitor("sel = %b, in = %b, y0 = %0b, y1 = %0b, y2 = %0b, y3 = %0b, y4 = %0b, y5 = %0b, y6 = %0b, y7 = %0b", sel, i, y0, y1, y2, y3, y4, y5, y6, y7);
