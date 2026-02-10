@@ -1,5 +1,6 @@
 module bin2gray_tb;
- reg [3:0] binary, gray;
+ reg [3:0] binary;
+ wire [3:0] gray;
  bin2gray b2g(binary, gray);
  
  initial begin
