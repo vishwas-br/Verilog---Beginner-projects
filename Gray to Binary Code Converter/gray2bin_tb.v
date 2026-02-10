@@ -1,5 +1,6 @@
 module gray2bin_tb;
- reg [3:0] binary, gray;
+ wire [3:0] binary;
+ reg [3:0] gray;
  gray2bin g2b(gray, binary);
  
  initial begin
