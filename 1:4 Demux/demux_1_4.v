@@ -1,7 +1,7 @@
-module demux_1_4()
+module demux_1_4(
   input [1:0] sel;
   input in;
-  output y0, y1, y2, y3;
+  output y0, y1, y2, y3);
 
   always @(*) begin
     case(sel)
