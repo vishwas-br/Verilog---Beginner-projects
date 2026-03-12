@@ -1,6 +1,6 @@
 module demux_1_4(
-  input [1:0] sel;
-  input in;
+  input [1:0] sel,
+  input in,
   output reg y0, 
   output reg y1,
   output reg y2, 
