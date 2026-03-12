@@ -1,7 +1,7 @@
 module demux_1_8()
   input [2:0] sel;
   input in;
-  output y0, y1, y2, y3, y4, y5, y6, y7;
+  output reg y0, y1, y2, y3, y4, y5, y6, y7;
 
   always @(*) begin
     case(sel)
