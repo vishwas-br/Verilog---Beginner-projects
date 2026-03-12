@@ -1,19 +1,19 @@
-module demux_1_8()
-  input [2:0] sel;
-  input in;
-  output reg y0, y1, y2, y3, y4, y5, y6, y7;
+module demux_1_8(
+  input [2:0] sel,
+  input in,
+  output reg y0, y1, y2, y3, y4, y5, y6, y7);
 
   always @(*) begin
+    {y0,y1,y2,y3,y4,y5,y6,y7} = 8'b0;
     case(sel)
-      3'h000: {y0, y1, y2, y3, y4, y5, y6, y7} = {in, 7'b0};
-      3'h001: {y0, y1, y2, y3, y4, y5, y6, y7} = {1'b0, in, 6'b0};
-      3'h010: {y0, y1, y2, y3, y4, y5, y6, y7} = {2'b0, in, 5'b0};
-      3'h011: {y0, y1, y2, y3, y4, y5, y6, y7} = {3'b0, in, 4'b0};
-      3'h100: {y0, y1, y2, y3, y4, y5, y6, y7} = {4'b0, in, 3'b0};
-      3'h101: {y0, y1, y2, y3, y4, y5, y6, y7} = {5'b0, in, 2'b0};
-      3'h110: {y0, y1, y2, y3, y4, y5, y6, y7} = {6'b0, in, 1'b0};
-      3'h111: {y0, y1, y2, y3, y4, y5, y6, y7} = { 7'b0, in};
-      default: $display("Invalid sel input");
+      3'b000: y0 = in;
+      3'b001: y1 = in;
+      3'b010: y2 = in;
+      3'b011: y3 = in;
+      3'b100: y4 = in;
+      3'b101: y5 = in;
+      3'b110: y6 = in;
+      3'b111: y7 = in;
     endcase
   end
 endmodule
