@@ -3,5 +3,12 @@ module demux_1_2(
   input in,
   output y0, y1);
   
-  assign {y0, y1} = sel ? { 1'b0, in} : {in, 1'b0};
+  alwaya @(*) begin
+     y0 = 0;
+     y1 = 0;
+     if (sel == 0)
+        y0 = in;
+    ]else
+        y1 = in;
+  end
 endmodule
